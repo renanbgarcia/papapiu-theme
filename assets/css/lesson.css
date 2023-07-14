@@ -1,0 +1,147 @@
+.pp-lesson-header {
+  background-color: white;
+  border-radius: 18px;
+  padding: 25px 10px;
+}
+
+.pp-lesson-main {
+  background-color: #f5f7fa;
+}
+
+.pp-lesson-header img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+.pp-lesson-info h1 {
+  font-size: 30px;
+}
+
+.navbar-shadow {
+  box-shadow: 0 6px 6px -3px rgba(39,44,51,.1),0 10px 14px 1px rgba(39,44,51,.04),0 4px 18px 3px rgba(39,44,51,.02)
+}
+
+/** Sidebar */
+
+.pp-lessons-sidebar {
+  background-color: var(--darker-color);
+  /* min-width: 300px; */
+  width: 300px;
+}
+
+.pp-lessons-sidebar .list-group-item {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  font-size: 15px;
+  border: none;
+}
+
+.dropdown-toggle { outline: 0; }
+
+.btn.btn-toggle {
+  /* padding: .25rem .5rem; */
+  font-weight: 600;
+  background-color: transparent;
+  padding-left: 20px;
+  color: var(--white-color);
+}
+/* .btn-toggle:hover,
+.btn-toggle:focus {
+  color: rgba(0, 0, 0, .85);
+  background-color: #d2f4ea;
+} */
+
+.btn-toggle::after {
+  width: 1.25em;
+  line-height: 0;
+  content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba(255, 255, 255, 0.5)' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+  transition: transform .35s ease;
+  /* transform-origin: 1em 25%; */
+  transform: rotate(180deg);
+}
+
+.btn-toggle[aria-expanded="true"] {
+  color: var(--light-color);
+}
+.btn-toggle[aria-expanded="true"]::after {
+  transform: rotate(90deg);
+}
+
+.btn-toggle-nav a {
+  padding: .1875rem .5rem;
+  margin-top: .125rem;
+  margin-left: 1.25rem;
+}
+/* .btn-toggle-nav a:hover,
+.btn-toggle-nav a:focus {
+  background-color: #d2f4ea;
+} */
+
+.scrollarea {
+  overflow-y: auto;
+}
+
+.lesson-info-icons {
+  text-align: center;
+  width: 100px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 14px;
+  font-weight: bold;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+
+.lesson-info-icon-number {
+  background-color: var(--primary-color);
+  width: 64px;
+  height: 64px;
+  line-height: 64px;
+  margin: auto;
+  border-radius: 8px;
+  color: white;
+  font-size: 3em;
+}
+
+ul.pp-lesson-vocabulary {
+  padding-top: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.pp-lesson-vocabulary li {
+  background-color: var(--light-color);
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  margin-right: 8px;
+  margin-bottom: 10px;
+  display: inline-block;
+  color: var(--white-color);
+  border-radius: 8px;
+}
+
+/** PDF Reader */
+.pdf-button-left,
+.pdf-button-right {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  position: absolute;
+  top: 50%;
+  padding: 0 !important;
+  color: #f5f7fa;
+}
+
+.pdf-button-left:hover,
+.pdf-button-right:hover {
+  background-color: var(--secondary-color);
+}
+
+.pdf-button-left {
+  left: 0;
+}
+
+.pdf-button-right {
+  right: 0;
+}
