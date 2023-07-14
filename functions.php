@@ -20,19 +20,21 @@ function add_theme_scripts()
 	wp_enqueue_style('custom-colors', get_template_directory_uri() . '/assets/css/colors.css');
 	wp_enqueue_style('style', get_stylesheet_uri());
 
-	wp_enqueue_script('jquery-latest', get_template_directory_uri() . '/assets/js/jquery.min.js', array(), 3.6, true);
+	// wp_enqueue_script('jquery-latest', get_template_directory_uri() . '/assets/js/jquery.min.js', array(), 3.6, true);
 	wp_register_script( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js', null, null, true );
+	wp_register_script( 'googleads', 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8249872062184929', null, null, false );
 	// wp_register_script( 'fontawesome', 'https://kit.fontawesome.com/7ffa5894cb.js', null, null, true );
 	// wp_enqueue_script('fontawesome');
 	wp_enqueue_script('bootstrap');
+	wp_enqueue_script('googleads');
 	wp_enqueue_script('carousel', get_template_directory_uri() . '/assets/js/owl.carousel.min.js', array(), 1.0, true);
 	// wp_enqueue_script('animate-number', get_template_directory_uri() . '/assets/js/jquery.animateNumber.min.js', array(), 1.0, true);
 	// wp_enqueue_script('waypoints', get_template_directory_uri() . '/assets/js/jquery.waypoints.min.js', array(), 1.0, true);
 	// wp_enqueue_script('fancybox', get_template_directory_uri() . '/assets/js/jquery.fancybox.min.js', array(), 1.0, true);
-	wp_enqueue_script('sticky', get_template_directory_uri() . '/assets/js/jquery.sticky.js', array('jquery-latest'), 1.0, true);
+	wp_enqueue_script('sticky', get_template_directory_uri() . '/assets/js/jquery.sticky.js', array('jquery'), 1.0, true);
 	// wp_enqueue_script('aos', get_template_directory_uri() . '/assets/js/aos.js', array(), 1.0, true);
-	wp_enqueue_script('custom', get_template_directory_uri() . '/assets/js/custom.js', array('jquery-latest'), 1.0, true);
-	wp_enqueue_script('lessons', get_template_directory_uri() . '/assets/js/lessons.js', array('jquery-latest', 'bootstrap'), 1.0, true);
+	wp_enqueue_script('custom', get_template_directory_uri() . '/assets/js/custom.js', array('jquery'), 1.0, true);
+	wp_enqueue_script('lessons', get_template_directory_uri() . '/assets/js/lessons.js', array('jquery', 'bootstrap'), 1.0, true);
 	if (is_single() && get_post_type() === "pp_lessons"){
 		wp_enqueue_script('pdfjs', 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.4.120/build/pdf.min.js', [], 1.0, true);
 		wp_enqueue_script('pdf-reader', get_template_directory_uri() . '/assets/js/pdfReader.js', ['pdfjs'], 1.0, true);
