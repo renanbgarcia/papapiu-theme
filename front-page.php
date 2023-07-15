@@ -16,7 +16,9 @@
               <div class="mb-5 text-white desc mx-" data-aos="fade-up" data-aos-delay="200">
                 <p class="text-start"><?php echo get_theme_mod( "hero_sub_heading" ) ?></p>
               </div>
-              <p class="mb-0 text-start"><a href="#" class="btn btn-secondary">Explore now <i class="bi bi-arrow-right"></i></a></p>
+              <?php echo get_theme_mod( "action_button" ) ?
+                    '<p class="mb-0 text-start"><a href="#" class="btn btn-secondary">Baixe agora <i class="bi bi-arrow-right"></i></a></p>' : ""
+              ?>
             </div>
           </div>
         </div>
