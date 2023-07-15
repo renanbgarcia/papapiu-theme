@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html <?php echo get_language_attributes() ?>>
+<?php global $wp; ?>
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
   <meta name="description" content="Atividades de inglês, matemática e alfabetização para crianças aprenderem se divertindo em casa ou na escola." />
   <link rel="shortcut icon" type="image/jpg" href="<?php echo get_site_icon_url() ?>"/>
+  <link rel="canonical" href="https://papapiu.com.br/<?php echo add_query_arg( array(), $wp->request ); ?>"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Carter+One&display=swap" rel="stylesheet">
