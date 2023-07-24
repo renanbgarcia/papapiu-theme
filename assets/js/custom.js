@@ -1,15 +1,5 @@
-// AOS.init({
-//   disable: 'mobile',
-//   duration: 800,
-//   easing: "slide",
-//   once: true,
-// });
-
 $(document).ready(function() {
   "use strict";
-
-  // $(".loader").delay(200).fadeOut("slow");
-  // $("#overlayer").delay(200).fadeOut("slow");
 
   var siteMenuClone = function () {
     $(".js-clone-nav").each(function () {
@@ -269,16 +259,6 @@ $(document).ready(function() {
   };
   owlPlugin();
 
-  // jarallax
-  var jarallaxPlugin = function () {
-    if ($(".jarallax").length > 0) {
-      $(".jarallax").jarallax({
-        speed: 0.2,
-      });
-    }
-  };
-  jarallaxPlugin();
-
   var accordion = function () {
     $('.btn-link[aria-expanded="true"]')
       .closest(".accordion-item")
@@ -293,13 +273,6 @@ $(document).ready(function() {
   };
   accordion();
 
-  var siteDatePicker = function () {
-    if ($(".datepicker").length > 0) {
-      $(".datepicker").datepicker();
-    }
-  };
-  siteDatePicker();
-
   var siteSticky = function () {
     $(".js-sticky-header").sticky({ topSpacing: 0 });
   };
@@ -310,7 +283,6 @@ $(document).ready(function() {
    */
   var backtotop = $('.back-to-top');
   if (backtotop.length > 0) {
-    console.log(backtotop);
     const toggleBacktotop = () => {
       if (window.scrollY > 100) {
         $(backtotop[0]).addClass('active');

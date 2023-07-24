@@ -14,6 +14,7 @@
 
   <link rel="stylesheet" type="text/css" href="<?php echo bloginfo( 'stylesheet_directory' ); ?>/font-face/fonts.css" />
 
+  <?php if (get_site_url() == "https://papapiu.com.br"): ?>
   <!-- Externos -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8249872062184929"
      crossorigin="anonymous"></script>
@@ -32,6 +33,7 @@
 
     gtag('config', 'G-NJPKRSRFT1');
   </script>
+  <?php endif ?>
 
   <title> <?php echo get_bloginfo( 'name' ) ?> </title>
   <?php wp_head(); ?>
