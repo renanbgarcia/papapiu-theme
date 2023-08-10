@@ -11,8 +11,8 @@ if ( !defined( 'ABSPATH' ) ) {
  get_header();
  ?>
 
- <main class="d-flex section">
-  <?php get_template_part('template-parts/lessons', 'sidebar') ?>
+ <main class="d-flex pp-section">
+  <?php //get_template_part('template-parts/lessons', 'sidebar') ?>
   <section class="container container-small">
 
 <?php
