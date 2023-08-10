@@ -1,4 +1,4 @@
-@import url(assets/css/lesson.css);html{scroll-behavior:smooth;position:relative}
+@import url(../css/lesson.css);html{scroll-behavior:smooth;position:relative}
 body{line-height:1.6;background-color:#fff;overflow-x:hidden;color:#333;letter-spacing:.3px}
 body:before{content:"";position:fixed;top:0;left:0;z-index:99;right:0;bottom:0;background:rgba(0,0,0,0.2);opacity:0;visibility:hidden;-webkit-transition:.3s all ease;transition:.3s all ease}
 body.offcanvas-menu:before{opacity:1;visibility:visible}

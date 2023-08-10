@@ -65,7 +65,7 @@ const imgDST = './assets/img/';
 
 // >>>>> Watch files paths.
 // Path to all *.scss files inside css folder and inside them.
-const watchStyles = './assets/css/**/*.scss';
+const watchStyles = './assets/scss/**/*.scss';
 
 // Path to all vendor JS files.
 const watchJsVendor = './assets/js/vendor/*.js';
