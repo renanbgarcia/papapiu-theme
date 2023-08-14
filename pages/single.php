@@ -1,5 +1,3 @@
-<?php get_header() ?>
-
 <section class="pp-section first-section">
     <div class="container">
         <div class="row">
@@ -16,5 +14,3 @@
         </div>
     </div>
 </section>
-
-<?php get_footer() ?>

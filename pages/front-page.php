@@ -1,4 +1,3 @@
-  <?php get_header() ?>
   <div class="pp-hero overlay" style="background-image: url('<?php echo get_theme_mod('hero_image') ?>')">
     <div class="container">
       <div class="row align-items-center justify-content-center">
@@ -191,6 +190,3 @@
   <?php if (get_theme_mod("home_show_testimonials")) {
     get_template_part('template-parts/lessons', 'testimonials');
   } ?>
-
-
-  <?php get_footer() ?>
