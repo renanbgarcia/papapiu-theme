@@ -4,16 +4,11 @@
       <div class="row align-items-center justify-content-center">
         <div class="col-12">
           <div class="row justify-content-left">
-            <!-- <div class="col-lg-6 text-center align-self-center order-lg-2">
-              <a href="https://vimeo.com/342333493" data-fancybox class="video-play-btn" data-aos="fade-up" data-aos-delay="400">
-                <span class="icon-play"></span>
-              </a>
-            </div> -->
             <div class="col-lg-6 text-center text-lg-left">
-              <h1 class="mb-4 heading text-white text-start" data-aos="fade-up" data-aos-delay="100">
+              <h1 class="mb-4 heading text-white text-start">
                 <?php echo get_theme_mod( "hero_heading" ) ?>
               </h1>
-              <div class="mb-5 text-white desc mx-" data-aos="fade-up" data-aos-delay="200">
+              <div class="mb-5 text-white desc mx-" >
                 <p class="text-start"><?php echo get_theme_mod( "hero_sub_heading" ) ?></p>
               </div>
               <?php echo get_theme_mod( "action_button" ) ?
@@ -128,14 +123,14 @@
   <div class="pp-section">
     <div class="container">
       <div class="row justify-content-center mb-5">
-        <div class="col-lg-7 text-center" data-aos="fade-up" data-aos-delay="0">
+        <div class="col-lg-7 text-center" >
           <h2 class="line-bottom text-center mb-4">What We Offer</h2>
           <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
             blind texts.</p>
         </div>
       </div>
       <div class="row">
-        <div class="col-6 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-6 col-sm-6 col-md-6 col-lg-4" >
           <div class="feature">
             <span class="icon-music_note color-1"></span>
             <h3>Music Class</h3>
@@ -143,7 +138,7 @@
               blind texts.</p>
           </div>
         </div>
-        <div class="col-6 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-6 col-sm-6 col-md-6 col-lg-4" >
           <div class="feature">
             <span class="icon-calculator color-2"></span>
             <h3>Math Class</h3>
@@ -151,7 +146,7 @@
               blind texts.</p>
           </div>
         </div>
-        <div class="col-6 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="col-6 col-sm-6 col-md-6 col-lg-4" >
           <div class="feature">
             <span class="icon-leanpub color-3"></span>
             <h3>English Class</h3>
@@ -159,7 +154,7 @@
               blind texts.</p>
           </div>
         </div>
-        <div class="col-6 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-6 col-sm-6 col-md-6 col-lg-4" >
           <div class="feature">
             <span class="icon-book color-4"></span>
             <h3>Reading for Kids</h3>
@@ -167,7 +162,7 @@
               blind texts.</p>
           </div>
         </div>
-        <div class="col-6 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-6 col-sm-6 col-md-6 col-lg-4" >
           <div class="feature">
             <span class="icon-change_history color-5"></span>
             <h3>History Class</h3>
@@ -175,7 +170,7 @@
               blind texts.</p>
           </div>
         </div>
-        <div class="col-6 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="col-6 col-sm-6 col-md-6 col-lg-4" >
           <div class="feature">
             <span class="icon-class color-6"></span>
             <h3>Active Class</h3>

@@ -9,8 +9,6 @@ function add_theme_scripts()
 	$directory_uri = get_template_directory_uri();
 
 	wp_enqueue_style('bootstrap-style', $directory_uri . '/assets/css/bootstrap.min.css');
-	wp_enqueue_style('carousel-style', $directory_uri . '/assets/css/owl.carousel.min.css');
-	wp_enqueue_style('owl-default-style', $directory_uri . '/assets/css/owl.theme.default.min.css');
 	wp_enqueue_style('posts-list', $directory_uri . '/assets/css/posts-list.css');
 	wp_enqueue_style('testimonial', $directory_uri . '/assets/css/testimonial.css');
 	wp_enqueue_style('comments', $directory_uri . '/assets/css/comments.css');
@@ -19,17 +17,12 @@ function add_theme_scripts()
 	wp_enqueue_style('main-style', $directory_uri . '/assets/css/main.min.css');
 	wp_enqueue_style('style', get_stylesheet_uri());
 
-	// wp_enqueue_script('jquery-latest', $directory_uri . '/assets/js/jquery.min.js', array(), 3.6, true);
-	// wp_enqueue_script('bootstrap', $directory_uri . '/assets/js/bootstrap.bundle.min.js', null, null, true );
-	// wp_enqueue_script('carousel', $directory_uri . '/assets/js/owl.carousel.min.js', array(), 1.0, true);
-	// wp_enqueue_script('sticky', $directory_uri . '/assets/js/jquery.sticky.js', array('jquery'), 1.0, true);
 	wp_enqueue_script('vendor', $directory_uri . '/assets/js/vendor.min.js', array('jquery'), 1.0, true);
 	wp_enqueue_script('custom', $directory_uri . '/assets/js/custom.min.js', array('jquery'), 1.0, true);
-	// wp_enqueue_script('lessons', $directory_uri . '/assets/js/lessons.js', array('jquery', 'bootstrap'), 1.0, true);
-	// if (is_single() && get_post_type() === "pp_lessons"){
-	// 	wp_enqueue_script('pdfjs', 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.4.120/build/pdf.min.js', [], 1.0, true);
-	// 	wp_enqueue_script('pdf-reader', $directory_uri . '/assets/js/pdfReader.js', ['pdfjs'], 1.0, true);
-	// }
+	if (is_singular("pp_lessons")){
+		wp_enqueue_script('pdfjs', 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.4.120/build/pdf.min.js', [], 1.0, true);
+		// wp_enqueue_script('pdf-reader', $directory_uri . '/assets/js/pdfReader.js', ['pdfjs'], 1.0, true);
+	}
 }
 add_action('wp_enqueue_scripts', 'add_theme_scripts', 999);
 

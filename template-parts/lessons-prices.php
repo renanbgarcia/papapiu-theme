@@ -1,7 +1,7 @@
 <div class="pp-section mb-5">
   <div class="container">
     <div class="row justify-content-center mb-5">
-      <div class="col-lg-7 text-center" data-aos="fade-up" data-aos-delay="0">
+      <div class="col-lg-7 text-center" >
         <h2 class="line-bottom text-center mb-4">Pricing</h2>
         <p>Pare de perder conteúdo e garanta o melhor que você não encontra em outro lugar por um preço super acessível.</p>
       </div>
@@ -20,7 +20,7 @@
       foreach( $prices->posts as $price) {
         $is_featured = get_field('preco_destacado', $price->ID);
         ?>
-        <div class="col-md-6 mb-4 mb-lg-0 col-lg-4" data-aos="fade-up" data-aos-delay="00">
+        <div class="col-md-6 mb-4 mb-lg-0 col-lg-4" >
           <div class="pricing">
             <div class="pricing-img mb-4"><img src="<?php echo get_field('preco_imagem', $price->ID) ?>" alt="Image do preço" class="img-fluid"></div>
             <div class="pricing-body">
