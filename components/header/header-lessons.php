@@ -1,4 +1,4 @@
-<?php get_template_part('template-parts/head', 'tags') ?>
+<?php include 'head-tags.php' ?>
 <body>
   <div class="site-mobile-menu">
     <div class="site-mobile-menu-header">

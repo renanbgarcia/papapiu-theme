@@ -13,7 +13,7 @@ get_header('lessons');
 ?>
 
 <main class="d-flex pp-lesson-main">
-  <?php get_template_part('template-parts/lessons', 'sidebar') ?>
+  <?php get_template_part('components/lessons', 'sidebar') ?>
   <section class="container container-small">
 
   // topicos

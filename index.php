@@ -2,7 +2,7 @@
 
 if (!defined('ABSPATH')) exit;
 
-pp_get_component('header/header');
+include 'components/header/header.php';
 
 if (is_singular('post'))
    get_template_part('pages/single');
@@ -28,4 +28,5 @@ elseif (is_tax('pp_modules'))
 elseif (is_page())
    get_template_part('pages/page');
 
-pp_get_component('footer/footer');
+
+get_template_part('components/footer/footer');

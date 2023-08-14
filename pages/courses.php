@@ -12,7 +12,7 @@ if ( !defined( 'ABSPATH' ) ) {
  ?>
 
  <main class="d-flex pp-section">
-  <?php //get_template_part('template-parts/lessons', 'sidebar') ?>
+  <?php //get_template_part('components/lessons', 'sidebar') ?>
   <section class="container container-small">
 
 <?php

@@ -1,4 +1,4 @@
-<?php get_template_part('components/head-tags') ?>
+<?php get_template_part('components/header/head', 'tags') ?>
 <body>
   <div class="site-mobile-menu">
     <div class="site-mobile-menu-header">

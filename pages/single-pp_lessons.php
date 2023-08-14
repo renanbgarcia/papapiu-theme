@@ -5,7 +5,7 @@ get_header('lessons');
 <script src="https://apis.google.com/js/platform.js" async defer></script>
 
 <main class="d-flex pp-lesson-main">
-  <?php get_template_part('template-parts/lessons', 'sidebar') ?>
+  <?php get_template_part('components/lessons', 'sidebar') ?>
   <section class="container container-small">
 
     <nav aria-label="breadcrumb" class="pt-3">

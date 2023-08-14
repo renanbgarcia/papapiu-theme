@@ -22,7 +22,7 @@
 
   <?php 
     if (get_theme_mod("home_featured_lessons")) {
-      get_template_part('template-parts/featured', 'lessons');
+      get_template_part('components/featured', 'lessons');
     }
   ?>
 
@@ -184,9 +184,9 @@
   ?>
 
   <?php if (get_theme_mod("home_show_princing")) {
-    get_template_part('template-parts/lessons', 'prices');
+    get_template_part('components/lessons', 'prices');
   } ?>
 
   <?php if (get_theme_mod("home_show_testimonials")) {
-    get_template_part('template-parts/lessons', 'testimonials');
+    get_template_part('components/lessons', 'testimonials');
   } ?>
