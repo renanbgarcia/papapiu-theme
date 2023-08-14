@@ -222,7 +222,8 @@ $(document).ready(function () {
       });
     }
   };
-  owlPlugin();
+  // owlPlugin();
+
   var accordion = function accordion() {
     $('.btn-link[aria-expanded="true"]').closest(".accordion-item").addClass("active");
     $(".collapse").on("show.bs.collapse", function () {
@@ -270,8 +271,6 @@ $(document).ready(function () {
 
 /* global bootstrap: false */
 (function () {
-  'use strict';
-
   var tooltipTriggerList = Array.from(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
   tooltipTriggerList.forEach(function (tooltipTriggerEl) {
     new bootstrap.Tooltip(tooltipTriggerEl);
@@ -294,33 +293,37 @@ var scale = 1,
   pageNum = 1,
   isRendering = false;
 pageNumPending = null;
-viewer = document.getElementById('the-canvas');
-var url = viewer.dataset.src;
-var buttonL = document.createElement('button');
-var buttonR = document.createElement('button');
-buttonL.className = 'pdf-button-left btn';
-buttonR.className = 'pdf-button-right btn';
-buttonL.innerHTML = "<i class='icon-arrow-left'></i>";
-buttonR.innerHTML = "<i class='icon-arrow-right'></i>";
-buttonL.onclick = onPrevPage;
-buttonR.onclick = onNextPage;
-viewer.append(buttonL, buttonR);
-var canvasLeft = document.createElement("canvas");
-canvasLeft.className = 'pdf-page-canvas col-12 col-sm-6';
-var canvasRight = document.createElement("canvas");
-canvasRight.className = 'pdf-page-canvas col-12 col-sm-6';
+function usePDF() {
+  viewer = document.getElementById('the-canvas');
+  if (!viewer) return;
+  var url = viewer.dataset.src;
+  var buttonL = document.createElement('button');
+  var buttonR = document.createElement('button');
+  buttonL.className = 'pdf-button-left btn';
+  buttonR.className = 'pdf-button-right btn';
+  buttonL.innerHTML = "<i class='icon-arrow-left'></i>";
+  buttonR.innerHTML = "<i class='icon-arrow-right'></i>";
+  buttonL.onclick = onPrevPage;
+  buttonR.onclick = onNextPage;
+  viewer.append(buttonL, buttonR);
+  var canvasLeft = document.createElement("canvas");
+  canvasLeft.className = 'pdf-page-canvas col-12 col-sm-6';
+  var canvasRight = document.createElement("canvas");
+  canvasRight.className = 'pdf-page-canvas col-12 col-sm-6';
 
-// Asynchronous download of PDF
-var loadingTask = pdfjsLib.getDocument(url);
-loadingTask.promise.then(function (pdf) {
-  thePdf = pdf;
-  viewer.appendChild(canvasLeft);
-  viewer.appendChild(canvasRight);
-  renderPages(pageNum);
-}, function (reason) {
-  // PDF loading error
-  console.error(reason);
-});
+  // Asynchronous download of PDF
+  var loadingTask = pdfjsLib.getDocument(url);
+  loadingTask.promise.then(function (pdf) {
+    thePdf = pdf;
+    viewer.appendChild(canvasLeft);
+    viewer.appendChild(canvasRight);
+    renderPages(pageNum);
+  }, function (reason) {
+    // PDF loading error
+    console.error(reason);
+  });
+}
+usePDF();
 function renderPages(pageNum) {
   isRendering = true;
   thePdf.getPage(pageNum).then(function (page) {

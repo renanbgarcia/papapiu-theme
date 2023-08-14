@@ -4,38 +4,46 @@ var scale = 1,
     isRendering = false
     pageNumPending = null
 
-viewer = document.getElementById('the-canvas');
-const url = viewer.dataset.src;
-var buttonL = document.createElement('button')
-var buttonR = document.createElement('button')
-buttonL.className = 'pdf-button-left btn'
-buttonR.className = 'pdf-button-right btn'
-buttonL.innerHTML = "<i class='icon-arrow-left'></i>"
-buttonR.innerHTML = "<i class='icon-arrow-right'></i>"
+function usePDF () {
+  
+  viewer = document.getElementById('the-canvas');
+  
+  if (!viewer) return
+  
+  const url = viewer.dataset.src;
+  var buttonL = document.createElement('button')
+  var buttonR = document.createElement('button')
+  buttonL.className = 'pdf-button-left btn'
+  buttonR.className = 'pdf-button-right btn'
+  buttonL.innerHTML = "<i class='icon-arrow-left'></i>"
+  buttonR.innerHTML = "<i class='icon-arrow-right'></i>"
+  
+  buttonL.onclick = onPrevPage
+  buttonR.onclick = onNextPage
+  
+  viewer.append(buttonL, buttonR)
+  
+  var canvasLeft = document.createElement("canvas"); 
+  canvasLeft.className = 'pdf-page-canvas col-12 col-sm-6';
+  var canvasRight = document.createElement("canvas"); 
+  canvasRight.className = 'pdf-page-canvas col-12 col-sm-6';
+  
+  // Asynchronous download of PDF
+  var loadingTask = pdfjsLib.getDocument(url);
+  loadingTask.promise.then(function(pdf) {
+  
+    thePdf = pdf; 
+    viewer.appendChild(canvasLeft);
+    viewer.appendChild(canvasRight);
+    renderPages(pageNum);
+  
+  }, function (reason) {
+    // PDF loading error
+    console.error(reason);
+  });
+}
 
-buttonL.onclick = onPrevPage
-buttonR.onclick = onNextPage
-
-viewer.append(buttonL, buttonR)
-
-var canvasLeft = document.createElement("canvas"); 
-canvasLeft.className = 'pdf-page-canvas col-12 col-sm-6';
-var canvasRight = document.createElement("canvas"); 
-canvasRight.className = 'pdf-page-canvas col-12 col-sm-6';
-
-// Asynchronous download of PDF
-var loadingTask = pdfjsLib.getDocument(url);
-loadingTask.promise.then(function(pdf) {
-
-  thePdf = pdf; 
-  viewer.appendChild(canvasLeft);
-  viewer.appendChild(canvasRight);
-  renderPages(pageNum);
-
-}, function (reason) {
-  // PDF loading error
-  console.error(reason);
-});
+usePDF()
 
 function renderPages(pageNum) {
   isRendering = true;

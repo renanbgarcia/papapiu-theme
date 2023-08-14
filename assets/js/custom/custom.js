@@ -257,7 +257,7 @@ $(document).ready(function() {
       });
     }
   };
-  owlPlugin();
+  // owlPlugin();
 
   var accordion = function () {
     $('.btn-link[aria-expanded="true"]')
